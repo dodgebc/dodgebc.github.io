@@ -6,9 +6,7 @@
   </head>
   
   <body>
-    
     <h1>Spectral Dashboard</h1>
-    
     <div style="white-space:nowrap">
       <iframe src="https://online-go.com/player/652533/" width="400px" height="100px" style="overflow:hidden; display:inline-block"></iframe>
       <iframe src="https://online-go.com/player/652532/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
@@ -16,7 +14,13 @@
       <iframe src="https://online-go.com/player/652529/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
       <iframe src="https://online-go.com/player/652535/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
     </div>
-    
   </body>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+        var buttons = document.getElementsByClassName("swal2-confirm primary");
+        buttons.forEach(button => button.click());
+    });
+  </script>
   
 </html>
