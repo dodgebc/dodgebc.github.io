@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title>Spectral Dashboard</title>
+  </head>
+  
+  <body>
+    <h1>Spectral Dashboard</h1>
+    <div style="white-space:nowrap">
+      <iframe id="spectral-13k" src="https://online-go.com/player/652548/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
+      <iframe id="spectral-10k" src="https://online-go.com/player/652533/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
+      <iframe id="spectral-7k" src="https://online-go.com/player/652532/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
+      <iframe id="spectral-4k" src="https://online-go.com/player/652531/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
+      <iframe id="spectral-1k" src="https://online-go.com/player/652529/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
+      <iframe id="spectral-2d" src="https://online-go.com/player/652535/" width="400px" height="10000px" style="overflow:hidden; display:inline-block"></iframe>
+    </div>
+  </body>
+  
+  <script>
+    window.addEventListener("load",function(){
+        console.log("Script started")
+        var buttons = document.getElementsByClassName("swal2-confirm primary");
+        console.log(buttons.length);
+        Array.prototype.forEach.call(buttons, button => button.click());
+    });
+  </script>
+  
+</html>
