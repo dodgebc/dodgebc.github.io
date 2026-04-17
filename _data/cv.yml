@@ -16,16 +16,14 @@ cv:
     Education:
       - institution: Stanford University
         location: Stanford, CA
-        area: Physics
-        studyType: PhD Candidate
+        studyType: PhD Candidate in Physics
         start_date: 2023
         end_date:
         highlights:
 
       - institution: Princeton University
         location: Princeton, NJ
-        area: Physics
-        studyType: Bachelor of Arts
+        studyType: Bachelor of Arts in Physics
         start_date: 2018
         end_date: 2022
         highlights:
@@ -33,32 +31,68 @@ cv:
     Presentations:
       - title: Kinetic Tomography with Sodium Absorption in the Plane
         date: 2026
-        awarder: MMT Symposium, Tucson, AZ
+        awarder: MMT Symposium
+        location: Tucson, AZ
+        url: https://drive.google.com/file/d/1UO3x7xKJAogRxeoRiyw0HjTMy-rwyjTw/view?usp=drive_link
       - title: "GraphGP: Scalable Gaussian Processes with Vecchia's Approximation"
         date: 2026
-        awarder: Center for Decoding the Universe Winter Forum, Stanford, CA
+        awarder: Center for Decoding the Universe Winter Forum
+        location: Stanford, CA
       - title: Mapping Cold Halo Gas in 3d with the Via Survey (poster)
         date: 2025
-        awarder: Stanford Data Science Conference, Stanford, CA
+        awarder: Stanford Data Science Conference
+        location: Stanford, CA
+
+    Teaching:
+      - title: PHY113 Computational Physics
+        date: 2026
+        awarder: Teaching Assistant, Stanford University
+        location: Stanford, CA
+      - title: PHY100 Observational Astrophysics
+        date: 2025
+        awarder: Teaching Assistant, Stanford University
+        location: Stanford, CA
+        url: https://kipac.github.io/ObservationalAstro
+      - title: PHY100/300 Observational Astrophysics
+        date: 2024
+        awarder: Teaching Assistant, Stanford University
+        location: Stanford, CA
+      - title: PHY104 Electricity and Magnetism, PHY106 Electricity and Magnetism, PHY205 Classical Mechanics
+        start_date: 2020
+        end_date: 2022
+        awarder: Undergraduate Teaching Roles, Princeton University
+        location: Princeton, NJ
+      - title: English Teaching Assistant
+        start_date: 2022
+        end_date: 2023
+        awarder: Fulbright Taiwan
+        location: Yilan, TW
 
     Service:
       - title: KIPAC Tea Committee
         date: 2026
+        location: Stanford, CA
       - title: KIPAC Public Stargazing
         awarder: Host and Dome Operator
-        date: 2024 –
+        start_date: 2024
+        location: Stanford, CA
       - title: Stanford Physics Undergraduate Directed Reading Program
         awarder: Graduate Student Organizer
         date: 2025
+        location: Stanford, CA
       - title: Stanford University Physics Society Mentorship Program
         awarder: Graduate Mentor
-        date: 2025 –
+        start_date: 2025
+        location: Stanford, CA
       - title: Stanford Physics Identity and Equity Summer Workshop
         awarder: Organizing Committee
         date: 2024
+        location: Stanford, CA
       - title: Princeton Physics Equity, Diversity, Inclusion
         awarder: Undergraduate Recruitment Working Group
-        date: 2020 – 2022
+        start_date: 2020
+        end_date: 2022
+        location: Princeton, NJ
 
     Awards:
       - title: NSF Graduate Research Fellowship

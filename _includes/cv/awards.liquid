@@ -6,21 +6,42 @@
   {% for entry in entries %}
     <li class="list-group-item">
       <div class="row">
-        {% capture start_date %}
-          {% if entry.date %}{{ entry.date }}{% endif %}
+        {% capture date_display %}
+          {% if entry.start_date %}
+            {% assign sd = entry.start_date | split: '-' | first %}
+            {% if entry.end_date %}
+              {% assign ed = entry.end_date | split: '-' | first %}
+              {{ sd }} - {{ ed }}
+            {% else %}
+              {{ sd }} -
+            {% endif %}
+          {% elsif entry.date %}
+            {{ entry.date }}
+          {% endif %}
         {% endcapture %}
+        {% assign date_display = date_display | strip %}
 
-        {% if start_date != '' %}
-          <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+        {% if date_display != '' %}
+          <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
             <table class="table-cv">
               <tbody>
                 <tr>
                   <td>
                     <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
-                      {{- start_date | split: '-' | slice: 0, 1 | join: '' -}}
+                      {{- date_display -}}
                     </span>
                   </td>
                 </tr>
+                {% if entry.location %}
+                  <tr>
+                    <td>
+                      <p class="location">
+                        <i class="fa-solid fa-location-dot iconlocation"></i>
+                        {{ entry.location }}
+                      </p>
+                    </td>
+                  </tr>
+                {% endif %}
               </tbody>
             </table>
           </div>

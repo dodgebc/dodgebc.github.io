@@ -1,0 +1,38 @@
+repos:
+  - repository: stanford-ism/graphgp
+    description: |
+      Gaussian processes are powerful priors for continuous fields, but scaling them to millions or billions of parameters remains a challenge. This package uses [Vecchia's approximation](https://en.wikipedia.org/wiki/Vecchia_approximation) with a new generation order and efficient implementation, acheiving linear scaling with very low memory overhead. It effortlessly handles arbitrary point distributions with large dynamic range, and has an exact inverse and determinant available. GraphGP uses JAX, with a faster custom CUDA extension that supports derivatives. Try it out!
+
+      ```python
+      graph = gp.build_graph(points, n0=100, k=10)
+      covariance = (cov_bins, cov_values)
+      xi = jr.normal(rng, (points.shape[0],))
+      values = gp.generate(graph, covariance, xi)
+      ```
+
+  - repository: dodgebc/jaxkd
+    description: |
+      Neighbor searches with *k*-d trees are important for many scientific applications, but JAX lacks a native implementation in part because the task is not very suited to array programming. This package uses two GPU-friendly tree algorithms [[1](https://arxiv.org/abs/2211.00120), [2](https://arxiv.org/abs/2210.12859)] to perform efficient neighbor searches using only JAX primitives. It will not be quite as performant as a lower-level implementation, but it is easier to integrate with JAX and run wherever JAX runs. An experimental CUDA extension is also available for faster queries.
+
+      ```python
+      tree = jk.build_tree(points)
+      counts = jk.count_neighbors(tree, queries, r=0.1)
+      neighbors, distances = jk.query_neighbors(tree, queries, k=10)
+      ```
+
+  - repository: dodgebc/jaxpurify
+    description: |
+      This small tool makes it easier to read and write probabilistic models in astrophysics using JAX:
+
+      ```python
+      @purify
+      def model():
+          x = param(3)
+          return jnp.sin(x)
+
+      params = model.normal(rng)
+      model(params)
+      ```
+
+      Parameters are only mentioned once, right next to where they are used. This avoids initialization methods and object-oriented programming while retaining automatic parameter management. There are also several other features which are convenient for the type of forward models needed in science. Under the hood, we use a [Jaxpr interpreter](https://docs.jax.dev/en/latest/notebooks/Writing_custom_interpreters_in_Jax.html) to interpret the model, similar to [Oryx](https://github.com/jax-ml/oryx).
+
