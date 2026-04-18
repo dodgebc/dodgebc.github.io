@@ -1,7 +1,7 @@
 repos:
   - repository: stanford-ism/graphgp
     description: |
-      Gaussian processes are powerful priors for continuous fields, but scaling them to millions or billions of parameters remains a challenge. This package uses [Vecchia's approximation](https://en.wikipedia.org/wiki/Vecchia_approximation) with a new generation order and efficient implementation, acheiving linear scaling with very low memory overhead. It effortlessly handles arbitrary point distributions with large dynamic range, and has an exact inverse and determinant available. GraphGP uses JAX, with a faster custom CUDA extension that supports derivatives. Try it out!
+      Gaussian processes are powerful priors for continuous fields, but scaling them to millions or billions of parameters remains a challenge. This package uses [Vecchia's approximation](https://en.wikipedia.org/wiki/Vecchia_approximation) with a new generation order and efficient implementation, acheiving linear scaling with very low memory overhead. It effortlessly handles arbitrary point distributions with large dynamic range, and has an exact inverse and determinant available. It is written in JAX, with a faster custom CUDA extension that supports derivatives. Try it out!
 
       ```python
       graph = gp.build_graph(points, n0=100, k=10)

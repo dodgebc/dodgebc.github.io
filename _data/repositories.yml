@@ -1,9 +1,0 @@
-github_users:
-
-repo_description_lines_max: 2
-
-github_repos:
-  - stanford-ism/graphgp
-  - dodgebc/jaxkd
-  - dodgebc/jaxpurify
-

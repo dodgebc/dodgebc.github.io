@@ -883,7 +883,7 @@ ${math}
       } else if (url.slice(-5) == ".html") {
         var label = "HTML";
       }
-      return ` &ensp;<a href="${url}">[${label || "link"}]</a>`;
+      return ` &ensp;<a href="${url}" target="_blank" rel="noopener noreferrer">[${label || "link"}]</a>`;
     } /* else if ("doi" in ent){
       return ` &ensp;<a href="https://doi.org/${ent.doi}" >[DOI]</a>`;
     }*/ else {
@@ -892,7 +892,7 @@ ${math}
   }
   function doi_string(ent, new_line) {
     if ("doi" in ent) {
-      return `${new_line ? "<br>" : ""} <a href="https://doi.org/${ent.doi}" style="text-decoration:inherit;">DOI: ${ent.doi}</a>`;
+      return `${new_line ? "<br>" : ""} <a href="https://doi.org/${ent.doi}" style="text-decoration:inherit;" target="_blank" rel="noopener noreferrer">DOI: ${ent.doi}</a>`;
     } else {
       return "";
     }

@@ -7,10 +7,14 @@ github_username: dodgebc
 custom_social:
   logo: ai ai-arxiv
   title: arXiv
-  url: https://arxiv.org/search/?searchtype=author&query=Dodge%2C+B
+  url: https://arxiv.org/search/?searchtype=author&query=Dodge%2C+Benjamin
+nasa_ads:
+  logo: ai ai-ads
+  title: NASA ADS
+  url: https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-2519-2219&sort=date+desc
 
 
-orcid_id: 0000-0002-2519-2219 # your ORCID ID
 scholar_userid: DA7fd-kAAAAJ # your Google Scholar ID
+orcid_id: 0000-0002-2519-2219 # your ORCID ID
 # linkedin_username: # your LinkedIn username
 # inspirehep_id: # your Inspire HEP author ID
