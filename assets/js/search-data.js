@@ -9,26 +9,26 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "publications",
+  },{id: "nav-papers",
+          title: "papers",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/publications/";
+            window.location.href = "/papers/";
           },
         },{id: "nav-code",
           title: "code",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/repositories/";
+            window.location.href = "/code/";
           },
-        },{id: "nav-cv",
-          title: "cv",
+        },{id: "nav-talks",
+          title: "talks",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/talks/";
           },
         },{id: "nav-extras",
           title: "extras",
@@ -37,11 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/extras/";
           },
-        },{id: "projects-3d-supernova-remnant-reconstruction",
+        },{id: "nav-cv",
+          title: "cv",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "extras-3d-supernova-remnant-reconstruction",
           title: '3D Supernova Remnant Reconstruction',
           description: "A short description of the project.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/supernova-remnant/";
+          section: "Extras",handler: () => {
+              window.location.href = "/extras/supernova-remnant/";
             },},{id: "teachings-observational-astronomy",
           title: 'Observational Astronomy',
           description: "KIPAC observational astronomy course.",
@@ -73,14 +80,14 @@ ninja.data = [{
         title: 'Custom_social',
         section: 'Socials',
         handler: () => {
-          window.open("https://arxiv.org/search/?searchtype=author&query=Dodge%2C+B", "_blank");
+          window.open("https://arxiv.org/search/?searchtype=author&query=Dodge%2C+Benjamin", "_blank");
         },
       },{
-        id: 'social-orcid',
-        title: 'ORCID',
+        id: 'social-nasa_ads',
+        title: 'Nasa_ads',
         section: 'Socials',
         handler: () => {
-          window.open("https://orcid.org/0000-0002-2519-2219", "_blank");
+          window.open("https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-2519-2219&sort=date+desc", "_blank");
         },
       },{
         id: 'social-scholar',
@@ -88,6 +95,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=DA7fd-kAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0002-2519-2219", "_blank");
         },
       },{
       id: 'light-theme',
