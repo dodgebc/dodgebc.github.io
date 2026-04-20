@@ -1,3 +1,11 @@
 metadata:
-  last_updated: ''
+  last_updated: '2026-04-20'
 papers:
+  DA7fd-kAAAAJ:d1gkVwhDpl0C:
+    citations: 19
+    title: Dynamics of stellar disc tilting from satellite mergers
+    year: '2023'
+  DA7fd-kAAAAJ:u-x6o8ySG0sC:
+    citations: 27
+    title: Single-dataset experts for multi-dataset question answering
+    year: '2021'
