@@ -7,6 +7,8 @@ nav: true
 nav_order: 2
 ---
 
+You can find a list of my publications from whichever source you prefer.
+
 <div class="social mb-4">
   <div class="contact-icons">
     <a href="{{ site.data.socials.custom_social.url }}" title="{{ site.data.socials.custom_social.title }}" target="_blank" rel="noopener noreferrer"><i class="{{ site.data.socials.custom_social.logo }}"></i></a>

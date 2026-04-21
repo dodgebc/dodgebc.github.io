@@ -23,3 +23,7 @@
 "friedman":
   - firstname: ["Dan", "Daniel", "D."]
     url: https://danfriedman0.github.io/
+
+"frank":
+  - firstname: ["Philipp", "P."]
+    url: https://www.ph-frank.de/

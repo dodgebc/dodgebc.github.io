@@ -22,3 +22,7 @@ I find it easier to understand the main point of a project when it is explained 
   {% endif %}
 </div>
 {% endfor %}
+
+---
+
+More coming soon!
