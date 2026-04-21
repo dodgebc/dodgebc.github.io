@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "extras-3d-supernova-remnant-reconstruction",
-          title: '3D Supernova Remnant Reconstruction',
-          description: "A short description of the project.",
+        },{id: "extras-3d-supernova-remnant",
+          title: '3D Supernova Remnant',
+          description: "",
           section: "Extras",handler: () => {
               window.location.href = "/extras/supernova-remnant/";
             },},{id: "teachings-observational-astronomy",
