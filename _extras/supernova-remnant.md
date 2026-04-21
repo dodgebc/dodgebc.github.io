@@ -8,7 +8,7 @@ importance: 1
 bibliography: snr-3d.bib
 ---
 
-What happens if you take a 2D image of a supernova remnant and deproject it in 3d using a Gaussian process prior?
+What happens if you take a 2D image of a supernova remnant and deproject it in 3D using a Gaussian process prior?
 
 <div class="row justify-content-center align-items-center mb-4">
   <div class="col-sm-5">
