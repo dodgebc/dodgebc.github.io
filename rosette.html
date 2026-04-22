@@ -54,6 +54,7 @@ input[type=range]{width:100%;accent-color:#5a8fff;cursor:pointer;display:block;}
         <div class="btn-row">
           <button class="btn active" id="btn-diffuse">Diffuse</button>
           <button class="btn" id="btn-raw">Raw &plusmn;0.1&micro;m</button>
+          <button class="btn" id="btn-color">Color 3.3/3.4/3.5</button>
         </div>
       </div>
       <div id="info-bar">click a pixel on the map</div>
@@ -81,6 +82,10 @@ var N_PIX=983839;
 var FALLBACK=104.21495819091797;
 var HAS_RAW=true;
 var RAW_HW=0.1;
+var WI_328=37;
+var WI_342=51;
+var WI_355=64;
+var COLOR_NORM={"r": [0.24067780375480652, 1.3875197172164917], "g": [0.3285140097141266, 3.0445356369018555], "b": [0.5697799921035767, 6.581029891967773]};
 var INIT_WI=39;
 var INIT_CMAX=6.0;
 var INIT_COL=699;
@@ -99,6 +104,7 @@ var PIX_SIZE_DEG=0.0010045623779296874;
   var info=document.getElementById('info-bar');
   var btnD=document.getElementById('btn-diffuse');
   var btnR=document.getElementById('btn-raw');
+  var btnC=document.getElementById('btn-color');
   var loadEl=document.getElementById('loading');
   var loadBar=document.getElementById('loading-bar');
   var mode='diffuse',curWi=INIT_WI,curCmax=INIT_CMAX,curSpec=null;
@@ -155,7 +161,32 @@ var PIX_SIZE_DEG=0.0010045623779296874;
     return cv.toDataURL('image/png');
   }
 
-  function getSrc(wi,cmax){return(mode==='raw'&&HAS_RAW)?renderRaw(wi,cmax):renderDiffuse(wi,cmax);}
+  function renderColor(cmax){
+    var brightness=INIT_CMAX/Math.max(cmax,1e-10);
+    var rMin=COLOR_NORM.r[0],rRng=Math.max(COLOR_NORM.r[1]-COLOR_NORM.r[0],1e-10);
+    var gMin=COLOR_NORM.g[0],gRng=Math.max(COLOR_NORM.g[1]-COLOR_NORM.g[0],1e-10);
+    var bMin=COLOR_NORM.b[0],bRng=Math.max(COLOR_NORM.b[1]-COLOR_NORM.b[0],1e-10);
+    var cv=document.createElement('canvas');
+    cv.width=NX;cv.height=NY;
+    var ctx=cv.getContext('2d'),img=ctx.createImageData(NX,NY),d=img.data;
+    for(var r=0;r<NY;r++) for(var c=0;c<NX;c++){
+      var pidx=gridArr[r*NX+c],p4=(r*NX+c)*4;
+      if(pidx<0){d[p4]=14;d[p4+1]=14;d[p4+2]=18;d[p4+3]=255;}
+      else{
+        d[p4]  =Math.min(255,Math.max(0,Math.round((cubeArr[WI_355*N_PIX+pidx]-rMin)/rRng*brightness*255)));
+        d[p4+1]=Math.min(255,Math.max(0,Math.round((cubeArr[WI_342*N_PIX+pidx]-gMin)/gRng*brightness*255)));
+        d[p4+2]=Math.min(255,Math.max(0,Math.round((cubeArr[WI_328*N_PIX+pidx]-bMin)/bRng*brightness*255)));
+        d[p4+3]=255;
+      }
+    }
+    ctx.putImageData(img,0,0);
+    return cv.toDataURL('image/png');
+  }
+
+  function getSrc(wi,cmax){
+    if(mode==='color') return renderColor(cmax);
+    return(mode==='raw'&&HAS_RAW)?renderRaw(wi,cmax):renderDiffuse(wi,cmax);
+  }
 
   function fmtVal(v){
     if(v===0)return '0';
@@ -176,10 +207,14 @@ var PIX_SIZE_DEG=0.0010045623779296874;
     mode=m;
     btnD.className=(m==='diffuse')?'btn active':'btn';
     btnR.className=(m==='raw')?'btn active':(HAS_RAW?'btn':'btn disabled');
+    btnC.className=(m==='color')?'btn active':'btn';
     updateWave(curWi,curCmax);
   }
 
-  wSl.addEventListener('input',function(){curWi=+this.value;updateWave(curWi,curCmax);});
+  wSl.addEventListener('input',function(){
+    curWi=+this.value;
+    if(mode!=='color') updateWave(curWi,curCmax);
+  });
   cSl.addEventListener('input',function(){
     curCmax=+this.value;
     cLbl.textContent='max flux = '+fmtVal(curCmax);
@@ -188,6 +223,7 @@ var PIX_SIZE_DEG=0.0010045623779296874;
   });
   btnD.addEventListener('click',function(){if(mode!=='diffuse')setMode('diffuse');});
   btnR.addEventListener('click',function(){if(HAS_RAW&&mode!=='raw')setMode('raw');});
+  btnC.addEventListener('click',function(){if(mode!=='color')setMode('color');});
 
   setProgress(0.05);
   var fetches=CUBE_FILES.map(function(f){return fetchBin(DATA_URL+f,Float32Array);});
