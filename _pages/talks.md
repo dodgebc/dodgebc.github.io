@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-I find it easier to understand the main point of a project when it is explained to me by a real person. With that in mind, here are a few short talks of mine that were recorded.
+Here are a few short talks of mine that were recorded.
 
 ---
 
