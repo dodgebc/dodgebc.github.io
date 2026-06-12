@@ -4,3 +4,9 @@ talks:
     location: Tucson, AZ
     date: 2026
     youtube: 8H20jtvXNhg
+
+  - title: "GraphGP: Scalable Gaussian Processes with Vecchia's Approximation"
+    venue: "AI+Science: Accelerating Discovery"
+    location: Stanford, CA
+    date: 2026
+    youtube: 5hyOtVC9Mfo

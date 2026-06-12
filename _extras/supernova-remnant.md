@@ -35,4 +35,4 @@ The prior draws look kind of cool:
   </div>
 </div>
 
-[Philipp Frank](https://www.ph-frank.de/) and I hacked this together as a demo using [NIFTy](https://ift.pages.mpcdf.de/nifty/index.html), but additional constraints like velocity information could make this scientifically interesting!
+[Philipp Frank](https://www.ph-frank.de/) and I hacked this together as a demo using [NIFTy](https://ift.pages.mpcdf.de/nifty/index.html), but additional constraints like velocity information can make this scientifically interesting! (See for example Milisavljevic & Fesen 2013 <d-cite key="milisavljevic2013cassiopeia"></d-cite>.)

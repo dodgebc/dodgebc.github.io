@@ -27,3 +27,7 @@
 "frank":
   - firstname: ["Philipp", "P."]
     url: https://www.ph-frank.de/
+
+"clark":
+  - firstname: ["Susan", "Susan E.", "S.", "S. E."]
+    url: https://clarkgroup.stanford.edu/

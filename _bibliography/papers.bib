@@ -1,6 +1,19 @@
 ---
 ---
 
+@article{dodge2026graphgp,
+  author  = {Dodge, Benjamin and Frank, Philipp and Clark, Susan E.},
+  title   = {GraphGP: Scalable Gaussian Processes with Vecchia's Approximation},
+  journal = {Stanford Conference on Physics and AI},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2606.11402},
+  arxiv   = {2606.11402},
+  preview = {graphgp-spiral.png},
+  abbr    = {arXiv},
+  selected = {true},
+  abstract = {Gaussian processes are a powerful tool for modeling continuous fields, but their naive O(N^3) computational cost and O(N^2) memory requirement often limit their practical use. Vecchia's approximation is a sparse precision matrix approximation for stationary, decaying kernels that conditions each point only on its k nearest neighbors. We present GraphGP, a GPU algorithm for Vecchia's approximation that scales to nearly a billion parameters with linear time and memory requirements, handling arbitrary point distributions over a large dynamic range. Our key contributions are (1) a bit-reversed k-d tree ordering that allows efficient neighbor searches while also maximizing batch parallelism, and (2) a differentiable CUDA implementation, which is substantially faster and more memory efficient than our pure JAX baseline. GraphGP provides the building blocks for inference, including forward generation, inverse application, log-determinant, and kernel parameter derivatives.},
+}
+
 @article{dodge2022dynamics,
   author    = {Dodge, Benjamin C and Slone, Oren and Lisanti, Mariangela and Cohen, Timothy},
   title     = {Dynamics of Stellar Disc Tilting from Satellite Mergers},
@@ -15,7 +28,7 @@
   preview   = {stellar-disc-tilting.png},
   abbr      = {MNRAS},
   selected  = {true},
-  abstract  = {The Milky Way's stellar disc can tilt in response to torques from infalling satellite galaxies and their tidal debris. Using N-body simulations of mergers in a Milky Way-like host galaxy, we develop a first-principles understanding of disc tilting dynamics. We find that the Galactic disc may still be tilting in response to the Gaia-Sausage-Enceladus merger, with implications for terrestrial dark matter direct detection experiments.},
+  abstract  = {The Milky Way's stellar disk can tilt in response to torques that result from infalling satellite galaxies and their associated tidal debris. In this work, we explore the dynamics of disk tilting by running N-body simulations of mergers in an isolated, isotropic Milky Way-like host galaxy, varying over satellite virial mass, initial position, and orbit. We develop and validate a first-principles understanding of the dynamics that govern how the host galaxy's stellar disk responds to the satellite's dark matter debris. We find that the degree of disk tilting can be large for cosmologically-motivated merger histories. In particular, our results suggest that the Galactic disk may still be tilting in response to Gaia-Sausage-Enceladus, one of the most significant recent mergers in the Milky Way's history. These findings have implications for terrestrial direct detection experiments as disk tilting changes the relative location of the Sun with respect to dark matter substructure left behind by a merging galaxy.},
 }
 
 @inproceedings{friedman2021single,
