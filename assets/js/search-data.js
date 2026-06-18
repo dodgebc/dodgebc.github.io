@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-extras",
           title: "extras",
-          description: "",
+          description: "Instructive examples and unfinished side-projects that I think are worth sharing.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/extras/";
@@ -44,7 +44,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "extras-3d-supernova-remnant",
+        },{id: "extras-gaussian-splat-dust-map",
+          title: 'Gaussian Splat Dust Map',
+          description: "",
+          section: "Extras",handler: () => {
+              window.location.href = "/extras/gaussian-splat-dust/";
+            },},{id: "extras-3d-supernova-remnant",
           title: '3D Supernova Remnant',
           description: "",
           section: "Extras",handler: () => {
