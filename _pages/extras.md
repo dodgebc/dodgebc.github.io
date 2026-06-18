@@ -2,10 +2,20 @@
 layout: page
 title: extras
 permalink: /extras/
-description:
+description: Instructive examples and unfinished side-projects that I think are worth sharing.
 nav: true
 nav_order: 6
 horizontal: false
+_styles: >
+  .card-video-wrapper {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+  }
+  .card-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 ---
 
 <!-- pages/projects.md -->
