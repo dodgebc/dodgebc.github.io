@@ -1,4 +1,10 @@
 talks:
+  - title: "GraphGP: Scalable Gaussian Processes with Vecchia's Approximation"
+    venue: AstroAI Lunch Talks, Center for Astrophysics
+    location: Cambridge, MA
+    date: 2026
+    youtube: 40Qa7Ia-6vE
+
   - title: Kinetic Tomography with Sodium Absorption in the Plane
     venue: MMT Symposium
     location: Tucson, AZ
